@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PRESI GLOBAL - Shop the World from Cameroon</title>
+    <!-- Google Fonts for premium design: Poppins (headings) & Inter (body text) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    
+    <!-- Link to the custom stylesheet (separated in style.css) -->
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <!-- Top Micro-Banner for trust / localization -->
+    <div class="top-banner" id="top-banner-id">
+      <p>🇨🇲 Direct procuring and customs-cleared shipping from China, USA, Dubai, & Europe straight to Cameroon! <span class="highlight">No credit card required.</span></p>
+    </div>
+
+    <!-- Header and Navigation -->
+    <header class="main-header" id="header-id">
+      <div class="header-container">
+        <!-- Logo replicating the PRESI GLOBAL logo from the structural foundation -->
+        <a href="#" class="logo-link" id="logo-id" aria-label="PRESI GLOBAL Home">
+          <svg class="logo-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 84">
+            <!-- Globe with Longitudes/Latitudes (Royal Blue) -->
+            <g transform="translate(5, 2)">
+              <circle cx="40" cy="40" r="38" fill="none" stroke="#0a469b" stroke-width="2.5" />
+              <!-- Latitudes -->
+              <ellipse cx="40" cy="40" rx="38" ry="14" fill="none" stroke="#0a469b" stroke-width="1.5" />
+              <ellipse cx="40" cy="40" rx="38" ry="26" fill="none" stroke="#0a469b" stroke-width="1.5" />
+              <!-- Longitudes -->
+              <ellipse cx="40" cy="40" rx="14" ry="38" fill="none" stroke="#0a469b" stroke-width="1.5" />
+              <ellipse cx="40" cy="40" rx="26" ry="38" fill="none" stroke="#0a469b" stroke-width="1.5" />
+              <!-- Horizontal line -->
+              <line x1="2" y1="40" x2="78" y2="40" stroke="#0a469b" stroke-width="2" />
+              <!-- Vertical line -->
+              <line x1="40" y1="2" x2="40" y2="78" stroke="#0a469b" stroke-width="2" />
+              
+              <!-- Giant capital letter 'G' styled over the globe -->
+              <path d="M 52,24 C 65,24 74,31 74,45 C 74,58 63,65 48,65 C 38,65 35,62 38,55 L 64,55" fill="none" stroke="#0a469b" stroke-width="11" stroke-linecap="round" stroke-linejoin="round" />
+              
+              <!-- Shopping Cart Overlay (Orange) -->
+              <!-- Cart Basket Grid and Frame -->
+              <path d="M 12,20 L 32,20 L 48,50 L 76,50 M 32,20 L 44,44 L 72,44 C 74,44 75,42 75,40 L 74,26 C 74,24 72,23 70,23 L 26,23" fill="none" stroke="#f97316" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" />
+              <!-- Inner horizontal mesh lines -->
+              <line x1="24" y1="29" x2="74" y2="29" stroke="#f97316" stroke-width="2.5" />
+              <line x1="28" y1="36" x2="73" y2="36" stroke="#f97316" stroke-width="2.5" />
+              <!-- Inner vertical mesh lines -->
+              <line x1="42" y1="23" x2="42" y2="44" stroke="#f97316" stroke-width="2" />
+              <line x1="54" y1="23" x2="54" y2="44" stroke="#f97316" stroke-width="2" />
+              <line x1="66" y1="23" x2="66" y2="44" stroke="#f97316" stroke-width="2" />
+              
+              <!-- Cart Wheels -->
+              <circle cx="45" cy="58" r="4.5" fill="#f97316" />
+              <circle cx="70" cy="58" r="4.5" fill="#f97316" />
+            </g>
+            
+            <!-- Company Lettering -->
+            <!-- PRESI (Bold Royal Blue) -->
+            <text x="105" y="38" font-family="'Poppins', sans-serif" font-weight="800" font-size="28" fill="#0a469b" letter-spacing="1">PRESI</text>
+            <!-- GLOBAL (Bold Orange) -->
+            <text x="105" y="66" font-family="'Poppins', sans-serif" font-weight="800" font-size="28" fill="#f97316" letter-spacing="1">GLOBAL</text>
+            <!-- Tagline aligned on the right -->
+            <text x="105" y="80" font-family="'Inter', sans-serif" font-weight="500" font-size="10.5" fill="#334155" letter-spacing="0.2">Shop the World from Cameroon</text>
+          </svg>
+        </a>
+
+        <!-- Desktop Navigation Links centered -->
+        <nav class="desktop-nav" id="desktop-nav-id">
+          <ul class="nav-links">
+            <li><a href="#hero" class="nav-link-item active">Home</a></li>
+            <li><a href="#services" class="nav-link-item">Services</a></li>
+            <li><a href="#why-us" class="nav-link-item">Why Us</a></li>
+            <li><a href="#signup-section" class="nav-link-item">Support</a></li>
+          </ul>
+        </nav>
+
+        <!-- Right Side CTA or controls -->
+        <div class="nav-actions" id="nav-actions-id">
+          <!-- Logged out states -->
+          <div class="logged-out-actions" id="logged-out-nav-actions" style="display: flex; align-items: center; gap: 16px;">
+            <button class="btn-login-trigger" id="login-open-btn" style="background: none; border: none; color: var(--color-primary-dark); font-family: var(--font-headings); font-weight: 600; font-size: 15px; cursor: pointer; padding: 8px 12px; transition: var(--transition-smooth);">Log In</button>
+            <button class="btn btn-primary orange-cta" id="signup-open-btn">Sign Up</button>
+          </div>
+          
+          <!-- Logged in states (initially hidden) -->
+          <div class="logged-in-actions" id="logged-in-nav-actions" style="display: none; align-items: center; gap: 16px;">
+            <div class="user-profile-badge" style="display: flex; align-items: center; gap: 10px; background-color: var(--color-primary-pale); padding: 6px 14px; border-radius: 50px; border: 1.5px solid rgba(10, 70, 155, 0.1);">
+              <span class="avatar-circle" id="user-avatar-initials" style="background-color: var(--color-primary); color: white; width: 34px; height: 34px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-family: var(--font-headings); font-size: 13.5px; text-transform: uppercase; box-shadow: 0 2px 4px rgba(10, 70, 155, 0.15);">--</span>
+              <span class="user-fullname" id="user-profile-name" style="font-size: 14.5px; font-weight: 600; color: var(--color-primary-dark); max-width: 120px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">Global Shopper</span>
+            </div>
+            <button class="btn-logout" id="logout-btn" style="background: none; border: none; color: var(--color-accent); font-family: var(--font-headings); font-weight: 600; font-size: 14.5px; cursor: pointer; padding: 8px 12px; transition: var(--transition-smooth);">Log Out</button>
+          </div>
+          
+          <!-- Hamburger menu trigger button -->
+          <button class="hamburger-btn" id="hamburger-menu" aria-label="Toggle navigation menu" aria-expanded="false">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Mobile Drawer Sidebar (Slsliding menu panel, starts off-screen) -->
+    <div class="mobile-drawer" id="mobile-nav-panel">
+      <div class="drawer-header">
+        <span class="drawer-title">Menu</span>
+        <button class="drawer-close" id="drawer-close-btn" aria-label="Close navigation menu">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+      <div class="drawer-content">
+        <ul class="drawer-links">
+          <li><a href="#hero" class="drawer-link-item">Home</a></li>
+          <li><a href="#services" class="drawer-link-item">Our Solutions</a></li>
+          <li><a href="#why-us" class="drawer-link-item">Why Choose Us</a></li>
+          <li><a href="#signup-section" class="drawer-link-item">Get Started</a></li>
+        </ul>
+        <div class="drawer-actions" id="drawer-actions-id">
+          <!-- Logged out mobile actions -->
+          <div class="logged-out-mobile" id="logged-out-drawer-actions" style="display: flex; flex-direction: column; gap: 12px; width: 100%;">
+            <button class="btn btn-primary orange-cta w-full text-center" id="mobile-signup-open-btn">Join Platform Now</button>
+            <button class="btn blue-outline w-full text-center" id="mobile-login-open-btn" style="font-weight: 600;">Log In to Account</button>
+          </div>
+          
+          <!-- Logged in mobile actions (initially hidden) -->
+          <div class="logged-in-mobile" id="logged-in-drawer-actions" style="display: none; flex-direction: column; gap: 12px; width: 100%;">
+            <div class="user-profile-badge-drawer" style="display: flex; align-items: center; gap: 12px; padding: 12px; background-color: var(--color-bg-light); border-radius: 12px; border: 1.5px solid var(--color-border);">
+              <span class="avatar-circle" id="mobile-user-avatar-initials" style="background-color: var(--color-primary); color: white; width: 44px; height: 44px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-family: var(--font-headings); font-size: 16px; text-transform: uppercase;">--</span>
+              <div style="display: flex; flex-direction: column; width: calc(100% - 60px);">
+                <span class="user-fullname" id="mobile-user-profile-name" style="font-weight: 700; color: var(--color-primary-dark); font-size: 15px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">Global Shopper</span>
+                <span style="font-size: 12px; color: var(--color-text-muted);">Secure Sourcing Member</span>
+              </div>
+            </div>
+            <button class="btn blue-outline w-full text-center" id="mobile-logout-btn">Log Out</button>
+          </div>
+          
+          <p class="drawer-tagline">“Shop the World from Cameroon”</p>
+        </div>
+      </div>
+    </div>
+    <!-- Dark overlay for mobile navigation background dim -->
+    <div class="drawer-overlay" id="drawer-background-overlay"></div>
+
+    <!-- Hero Section (Homepage) -->
+    <section class="hero-section" id="hero">
+      <div class="container hero-grid">
+        <!-- Hero Copy Content (Left Side) -->
+        <div class="hero-content" id="hero-text-block">
+          <div class="badge">
+            <span class="badge-icon">🌐</span> Global Trade Facilitation
+          </div>
+          <h1 class="hero-title">Shop the World <span class="highlight-blue">from Cameroon</span></h1>
+          <p class="hero-description">
+            The trusted global e-commerce and trade facilitation platform connecting you directly to international markets without payment or delivery limits. Secure your orders, simplify logistics, and pay with local payment methods.
+          </p>
+          
+          <!-- Trust bullet indicators to reinforce consumer confidence -->
+          <ul class="trust-list">
+            <li>
+              <span class="check-icon">✓</span> <span>Import custom requests from <strong>China, USA, & Dubai</strong></span>
+            </li>
+            <li>
+              <span class="check-icon">✓</span> <span>Zero fraud risk &ndash; pay with <strong>MTN MoMo, Orange Money</strong></span>
+            </li>
+            <li>
+              <span class="check-icon">✓</span> <span>Guaranteed customs clearance & direct door delivery</span>
+            </li>
+          </ul>
+
+          <div class="hero-ctas">
+            <a href="#signup-section" class="btn btn-primary orange-cta btn-lg">Order Now (Get Started)</a>
+            <a href="#services" class="btn btn-secondary blue-outline btn-lg">How It Works</a>
+          </div>
+        </div>
+
+        <!-- Hero Mockup Container (Right Side) -->
+        <div class="hero-mockup" id="hero-graphics-container">
+          <div class="mockup-relative">
+            <!-- Decorative atmospheric circles behind graphics -->
+            <div class="circle-decorator bg-orange"></div>
+            <div class="circle-decorator bg-blue"></div>
+            
+            <!-- High-end Generated Logistics & Shopping Graphic (Vite path /src/assets/images/) -->
+            <div class="image-wrapper shadow-premium">
+              <img src="/src/assets/images/global_trade_hero_1780462750306.png" alt="PRESI GLOBAL E-commerce Logistics Mockup illustration" class="mockup-img" referrerPolicy="no-referrer" />
+            </div>
+
+            <!-- Floating statistics or live cards for high premium design values -->
+            <div class="floating-badge shadow-premium badge-top-right">
+              <div class="f-icon">✈️</div>
+              <div>
+                <h4>Express Air Cargo</h4>
+                <p>5 &ndash; 9 Days Delivery</p>
+              </div>
+            </div>
+
+            <div class="floating-badge shadow-premium badge-bottom-left">
+              <div class="f-icon">🔒</div>
+              <div>
+                <h4>Escrow Trusted</h4>
+                <p>100% Secured Escrow Protection</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Core Solutions & Value Props Section -->
+    <section class="services-section" id="services">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="section-header" id="services-header-id">
+          <span class="section-subtitle">Core Marketplace Solutions</span>
+          <h2 class="section-title">Overcoming Local Trade Limits</h2>
+          <p class="section-description">We serve as the bridge between international retail suppliers and Cameroon. Here is how our comprehensive ecosystem simplifies global sourcing for you.</p>
+        </div>
+
+        <!-- Responsive 3-Column CSS Grid Layout -->
+        <div class="solutions-grid" id="solutions-container-grid">
+          <!-- Card 1: Global Sourcing -->
+          <div class="solution-card shadow-card" id="card-global-sourcing">
+            <div class="card-icon-container bg-light-blue animate-icon-bounce">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#0a469b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="2" y1="12" x2="22" y2="12"></line>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+              </svg>
+            </div>
+            <h3 class="card-title">1. Global Sourcing</h3>
+            <p class="card-text">
+              Procuring high-quality items has never been easier. Source premium <strong>Phones, Laptops, Fashion Apparel, & Automobile Parts</strong> directly from wholesale hubs in <strong>China, USA, Europe, and Dubai</strong>.
+            </p>
+            <ul class="card-bullets">
+              <li>Direct merchant connections</li>
+              <li>Sourcing from Alibaba, Amazon, & eBay</li>
+              <li>Verified supplier verification</li>
+            </ul>
+            <div class="card-footer-badge">No Limits</div>
+          </div>
+
+          <!-- Card 2: Secure Payment Intermediary -->
+          <div class="solution-card shadow-card" id="card-secure-payment">
+            <div class="card-icon-container bg-light-orange animate-icon-bounce">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#f97316" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="5" width="20" height="14" rx="2" ry="2"></rect>
+                <line x1="2" y1="10" x2="22" y2="10"></line>
+              </svg>
+            </div>
+            <h3 class="card-title">2. Secure Payment Intermediary</h3>
+            <p class="card-text">
+              Eliminate international payment cards, bank blocks, and exchange limit headaches. We accept your local Cameroonian payment options and settle global invoices instantly on your behalf.
+            </p>
+            <ul class="card-bullets">
+              <li>Pay with MTN Mobile Money & Orange Money</li>
+              <li>Safe local currency Escrow Protection</li>
+              <li>Complete fraud prevention guarantees</li>
+            </ul>
+            <div class="card-footer-badge">100% Secure</div>
+          </div>
+
+          <!-- Card 3: Affordable Shipping & Logistics -->
+          <div class="solution-card shadow-card" id="card-affordable-shipping">
+            <div class="card-icon-container bg-light-purple animate-icon-bounce">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#7c3aed" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="1" y="3" width="15" height="13"></rect>
+                <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+                <circle cx="5.5" cy="18.5" r="2.5"></circle>
+                <circle cx="18.5" cy="18.5" r="2.5"></circle>
+              </svg>
+            </div>
+            <h3 class="card-title">3. Cargo & Custom Clearance</h3>
+            <p class="card-text">
+              Avoid surprise customs fees, package detentions, or stressful bureaucratic shipping queues. We offer consolidated, affordable Air Cargo and Ocean Freight directly into Douala and Yaoundé.
+            </p>
+            <ul class="card-bullets">
+              <li>Consolidated, cheap container options</li>
+              <li>Pre-calculated custom clearance inclusive</li>
+              <li>Home delivery & local office pickups</li>
+            </ul>
+            <div class="card-footer-badge">Door-to-Door</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Us Section (Reassuring consumers) -->
+    <section class="why-us-section" id="why-us">
+      <div class="container why-us-wrapper">
+        <div class="why-us-info">
+          <span class="section-subtitle">Why Choose PRESI GLOBAL</span>
+          <h2 class="section-title text-left">Your Safe Channel for Global Trade</h2>
+          <p class="section-description text-left">
+            Traditional importing in Cameroon is plagued with card restrictions, expensive shipping rates, and fraudulent suppliers. PRESI GLOBAL was built from the ground up to solve these core frustrations, empowering local retailers, young student entrepreneurs, and online shoppers.
+          </p>
+
+          <div class="metrics-grid">
+            <div class="metric-card">
+              <h3>2.5x</h3>
+              <p>Cheaper Sourcing Rates</p>
+            </div>
+            <div class="metric-card">
+              <h3>100%</h3>
+              <p>Verified Secure Payments</p>
+            </div>
+            <div class="metric-card">
+              <h3>5k+</h3>
+              <p>Happy Cameroonian Buyers</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="why-us-graphic">
+          <div class="feature-rows">
+            <div class="feature-row shadow-premium">
+              <span class="f-num">01</span>
+              <div>
+                <h4>Consolidated Procurement Hubs</h4>
+                <p>We combine orders from thousands of Cameroonian buyers in China and the US to leverage massive shipping discounts directly passed to you.</p>
+              </div>
+            </div>
+
+            <div class="feature-row shadow-premium">
+              <span class="f-numOrange">02</span>
+              <div>
+                <h4>Verified Logistics Network</h4>
+                <p>Enjoy end-to-end trace protection. We inspect your procurement orders in our international warehouse centers before they head to Cameroon.</p>
+              </div>
+            </div>
+
+            <div class="feature-row shadow-premium">
+              <span class="f-numPurple">03</span>
+              <div>
+                <h4>Friendly Local Support</h4>
+                <p>Our Douala-based operation is always within reach via WhatsApp, Phone, or onsite offices to help resolve custom orders.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Signup / Onboarding / Conversion Section -->
+    <section class="signup-section" id="signup-section">
+      <div class="container">
+        <div class="signup-card shadow-premium animate-fade-in">
+          <!-- Background accent splashes -->
+          <div class="splash splash-blue"></div>
+          <div class="splash splash-orange"></div>
+          
+          <div class="signup-content">
+            <span class="tag-accent">Instant Membership</span>
+            <h2>Ready to Elevate Your Sourcing?</h2>
+            <p>Join thousands of smart Cameroonians who import products at original wholesale prices. Register now with your email to receive free procurement quotes and shipping catalogs.</p>
+            
+            <!-- Elegant responsive form -->
+            <form class="signup-form" id="join-platform-form" action="#" method="POST">
+              <div class="input-group">
+                <span class="input-icon">✉️</span>
+                <input type="email" id="user-email-input" class="signup-input" placeholder="Enter your business or personal email..." required />
+              </div>
+              <button type="submit" class="btn btn-primary orange-cta submit-btn shadow-premium">
+                <span>Start Procuring</span>
+                <span class="btn-arrow">&rarr;</span>
+              </button>
+            </form>
+            
+            <!-- Dynamic Success Message Alert (initially hidden, shown via JS) -->
+            <div class="form-feedback-alert" id="form-success-alert">
+              <div class="alert-icon">✓</div>
+              <div class="alert-text">
+                <strong>Congratulations!</strong> Your early access and catalog request have been received. Our Douala team will email you within 24 hours.
+              </div>
+            </div>
+
+            <!-- Footer micro-disclaimer tags -->
+            <div class="form-tags">
+              <span>🔒 Zero subscription fees</span>
+              <span>⚡ Direct catalog access</span>
+              <span>🤝 Real human agent support</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Bottom Sticky WhatsApp Widget -->
+    <div class="whatsapp-sticky shadow-premium" id="whatsapp-sticky-widget">
+      <a href="https://wa.me/237600000000?text=Hello%20Presi%20Global,%20I%20would%20like%20to%20place%20a%20shop%20order!" target="_blank" rel="noopener noreferrer" class="whatsapp-anchor" aria-label="Chat with PRESI GLOBAL support on WhatsApp">
+        <span class="wa-icon-pulse">
+          <svg class="wa-svg" viewBox="0 0 24 24" width="28" height="28" fill="#ffffff">
+            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.457L0 24zm6.59-4.846c1.6.95 3.1 1.448 4.7 1.45 5.539 0 10.046-4.437 10.05-9.888.002-2.64-1.011-5.123-2.857-6.973C16.643 1.892 14.185 1.07 11.55 1.071c-5.54 0-10.05 4.437-10.054 9.89 0 1.77.475 3.3 1.34 4.767L1.879 21.36l5.77-1.5-.002-.006c-1.74 1.05-3.04.54-3.04.54zm12.35-6.52c-.318-.16-1.88-.93-2.17-1.036-.29-.11-.5-.16-.71.16-.21.32-.82 1.03-.997 1.25-.177.215-.355.24-.67.08-.318-.16-1.343-.497-2.557-1.584-.945-.844-1.583-1.887-1.768-2.203-.187-.318-.02-.49.14-.647.143-.142.317-.37.476-.554.16-.187.21-.32.316-.534.106-.215.053-.4-.026-.56-.08-.162-.71-1.71-.974-2.35-.257-.617-.518-.535-.71-.545-.183-.008-.393-.01-.603-.01s-.55.08-.838.4c-.287.32-1.096 1.074-1.096 2.62 0 1.545 1.127 3.036 1.284 3.25.158.216 2.22 3.4 5.375 4.76.755.324 1.34.517 1.8.662.756.24 1.443.207 1.986.126.606-.09 1.88-.77 2.146-1.474.265-.705.265-1.31.186-1.436-.08-.127-.29-.21-.607-.37z"/>
+          </svg>
+        </span>
+        <span class="wa-text">Chat with Douala Support</span>
+      </a>
+    </div>
+
+    <!-- Main Footer -->
+    <footer class="main-footer">
+      <div class="container footer-grid">
+        <!-- Brand Segment -->
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <span class="f-blue">PRESI</span> <span class="f-orange">GLOBAL</span>
+          </div>
+          <p class="footer-tagline">“Shop the World from Cameroon”</p>
+          <p class="footer-desc">Empowering local retailers, trade agents, and personal shoppers with direct access to elite international supplier markets.</p>
+        </div>
+
+        <!-- Links Segments -->
+        <div class="footer-links-col">
+          <h3>Services</h3>
+          <ul>
+            <li><a href="#services">Global Procurement</a></li>
+            <li><a href="#services">Consolidated Shipping</a></li>
+            <li><a href="#services">MoMo Invoicing</a></li>
+            <li><a href="#services font-bold">China-to-Cameroon</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links-col">
+          <h3>Why Us</h3>
+          <ul>
+            <li><a href="#why-us">Fraud Security</a></li>
+            <li><a href="#why-us">Cost Savings</a></li>
+            <li><a href="#why-us">No Card Requirements</a></li>
+            <li><a href="#why-us">Office Location</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Segment -->
+        <div class="footer-contact">
+          <h3>Get In Touch</h3>
+          <p class="contact-item">📍 <strong>Douala Head Office:</strong> Akwa, Rue de la Joie, Douala, Cameroon</p>
+          <p class="contact-item">📞 <strong>Phone:</strong> +237 677 88 99 00</p>
+          <p class="contact-item">✉️ <strong>Email:</strong> support@presiglobal.com</p>
+          
+          <div class="social-channels">
+            <a href="#" class="social-icon" aria-label="Facebook">📘</a>
+            <a href="#" class="social-icon" aria-label="Instagram">📸</a>
+            <a href="#" class="social-icon" aria-label="Twitter">🐦</a>
+            <a href="https://wa.me/237677889900" class="social-icon" aria-label="WhatsApp">💬</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="container footer-bottom-flex">
+          <p>&copy; 2026 PRESI GLOBAL. All rights reserved. Trade & Logistics Intermediation.</p>
+          <div class="footer-bottom-links">
+            <a href="#">Terms of Service</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Cameroon Customs Guidelines</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ========================================== -->
+    <!-- SECURE AUTHENTICATION SYSTEM MODAL (LOGIN & SIGNUP) -->
+    <!-- ========================================== -->
+    <div class="auth-modal-overlay" id="auth-modal-screen">
+      <div class="auth-modal-card shadow-premium">
+        <!-- Close trigger -->
+        <button class="auth-modal-close" id="auth-close-trigger" aria-label="Close Authentication Form">&times;</button>
+        
+        <!-- Left Side: Brand Value Proposition Pane (Hidden on Mobile) -->
+        <div class="auth-promo-pane">
+          <div class="auth-promo-content">
+            <div class="promo-header">
+              <span class="promo-badge">🛡️ SECURE PORTAL</span>
+              <h3>Sourcing Without Boundaries</h3>
+            </div>
+            
+            <p class="promo-text">One Unified Core Panel to manage procurement, make seamless MTN/Orange Money invoice payments, and track express cargo parcels from anywhere in the world straight to your door in Douala, Yaoundé, and beyond.</p>
+            
+            <ul class="promo-benefits">
+              <li>
+                <span class="benefit-bullet">✓</span>
+                <div>
+                  <strong>Protected Escrow Pay</strong>
+                  <p>Your money is only settled after we inspect your parcels in our sorting hubs.</p>
+                </div>
+              </li>
+              <li>
+                <span class="benefit-bullet">✓</span>
+                <div>
+                  <strong>No Card Restrictions</strong>
+                  <p>Procuring from USA, China, Europe, and Dubai has never been this easy & cash-friendly.</p>
+                </div>
+              </li>
+            </ul>
+            
+            <p class="promo-tagline">“Shop the World from Cameroon”</p>
+          </div>
+        </div>
+        
+        <!-- Right Side: User Authentication Interactive Form Frame -->
+        <div class="auth-form-pane">
+          <!-- Header Toggle Tabs -->
+          <div class="auth-tabs">
+            <button class="auth-tab-btn active" id="tab-login" data-target="login-view">Log In</button>
+            <button class="auth-tab-btn" id="tab-signup" data-target="signup-view">Create Account</button>
+          </div>
+          
+          <!-- Standard Error/Success Alerts within the card -->
+          <div class="auth-alert error" id="auth-error-alert" style="display: none;">
+            <span class="alert-msg">Invalid email syntax or password check!</span>
+          </div>
+          
+          <div class="auth-alert success" id="auth-success-alert" style="display: none;">
+            <span class="alert-msg">Success alert notification!</span>
+          </div>
+          
+          <!-- View Container: LOGIN FORM -->
+          <div class="auth-view-block active" id="login-view">
+            <div class="auth-form-header">
+              <h3>Welcome Back</h3>
+              <p>Log in securely to place procurement orders and check shipping statuses.</p>
+            </div>
+            
+            <form class="auth-core-form" id="core-login-form">
+              <div class="auth-field-group">
+                <label for="login-email">Email Address</label>
+                <div class="form-input-wrapper">
+                  <span class="field-icon">✉️</span>
+                  <input type="email" id="login-email" class="form-control" placeholder="Enter your registered email address..." required autocomplete="email" />
+                </div>
+              </div>
+              
+              <div class="auth-field-group">
+                <label for="login-password">Password</label>
+                <div class="form-input-wrapper">
+                  <span class="field-icon">🔒</span>
+                  <input type="password" id="login-password" class="form-control" placeholder="Enter your secret secure password..." required autocomplete="current-password" />
+                </div>
+              </div>
+              
+              <button type="submit" class="btn btn-primary orange-cta w-full text-center auth-submit-btn" id="login-submit-btn">
+                <span>Secure Log In</span>
+                <span class="loader-spinner" id="login-spinner" style="display: none; margin-left: 8px;">🔄</span>
+              </button>
+            </form>
+            
+            <div class="auth-view-footer">
+              <p>New to PRESI GLOBAL? <a href="#" id="switch-to-signup-trigger" class="highlight-anchor">Register free here</a></p>
+            </div>
+          </div>
+          
+          <!-- View Container: SIGNUP FORM -->
+          <div class="auth-view-block" id="signup-view" style="display: none;">
+            <div class="auth-form-header">
+              <h3>Create Your Account</h3>
+              <p>Join PRESI GLOBAL to buy original products directly from USA, China, & Dubai.</p>
+            </div>
+            
+            <form class="auth-core-form" id="core-register-form">
+              <div class="auth-field-group">
+                <label for="signup-name">Full Name</label>
+                <div class="form-input-wrapper">
+                  <span class="field-icon">👤</span>
+                  <input type="text" id="signup-name" class="form-control" placeholder="Enter your first and last name..." required minlength="2" maxlength="80" autocomplete="name" />
+                </div>
+              </div>
+              
+              <div class="auth-field-group">
+                <label for="signup-email">Email Address</label>
+                <div class="form-input-wrapper">
+                  <span class="field-icon">✉️</span>
+                  <input type="email" id="signup-email" class="form-control" placeholder="Enter your personal or business email..." required autocomplete="email" />
+                </div>
+              </div>
+              
+              <div class="auth-field-group">
+                <label for="signup-password">Secure Password</label>
+                <div class="form-input-wrapper">
+                  <span class="field-icon">🔒</span>
+                  <input type="password" id="signup-password" class="form-control" placeholder="Create a secure password (min. 6 chars)..." required minlength="6" autocomplete="new-password" />
+                </div>
+                <!-- Interactive validation feedback -->
+                <div class="password-strength-info" style="margin-top: 8px; font-size: 12.5px; color: var(--color-text-muted); display: flex; align-items: center; gap: 6px;">
+                  <span id="pw-length-indicator" style="color: #ef4444; font-weight: 600;">✗</span>
+                  <span>Minimum 6 characters required</span>
+                </div>
+              </div>
+              
+              <button type="submit" class="btn btn-primary orange-cta w-full text-center auth-submit-btn" id="signup-submit-btn">
+                <span>Complete Free Sign Up</span>
+                <span class="loader-spinner" id="signup-spinner" style="display: none; margin-left: 8px;">🔄</span>
+              </button>
+            </form>
+            
+            <div class="auth-view-footer">
+              <p>Already registered with us? <a href="#" id="switch-to-login-trigger" class="highlight-anchor">Log In securely</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Link to the Vanilla JavaScript file (separated in index.js) -->
+    <script src="/index.js" defer></script>
+  </body>
+</html>

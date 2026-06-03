@@ -1,0 +1,6 @@
+{
+  "name": "PRESI GLOBAL",
+  "description": "Premium global e-commerce and trade facilitation platform in Cameroon. Shop the World from Cameroon with unified procurement, secure payment processing, and affordable international shipping.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
